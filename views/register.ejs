@@ -1,0 +1,13 @@
+<% include partials/header %>
+
+<div class="container">
+  <form action="/register" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    <input type="text" name="username" placeholder="Username">
+    <input type="email" name="email" placeholder="me@example.com">
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+<% include partials/footer %>
