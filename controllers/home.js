@@ -1,3 +1,4 @@
+const middleware = require('../middleware');
 const passport = require('passport');
 const User = require('../models/User');
 const csrf = require('csurf');
@@ -59,11 +60,4 @@ module.exports = function(app) {
     res.redirect('/');
   });
   
-  function isLoggedIn(req, res, next) {
-    if(req.isAuthenticated()) {
-      return next();
-    }
-    res.redirect('/login');
-  }
-  
-};
+ };
