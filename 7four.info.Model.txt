@@ -1,0 +1,44 @@
+The website should contain 5 features/funtionalities. A login form, a create an account form, a change settings feature and a 
+publish content form. When the user creates an account they will have access to the publish content form in which they can publish their 
+articles or short stories. They will also, when they need or want to, be able to change their user settings such as password and email. 
+When the user chooses to publish their content they will choose a category from a list and go from there as you can see from the publish content 
+model below the change email model.
+
+
+/* Models */
+
+/* Login */ /* Reads Data */
+Email: -------------
+Password: ----------------
+Login BTN
+
+
+
+/* Create Account */ /* Writes Data */
+Email: --------------
+Password: ---------------- /* Must be at least 10 characters and no more than 16 */
+Confirm Password: ------------- /* Must match password above */
+Create Account BTN
+
+
+/* Settings */ /* Allows user to change their password and email */ Example of change settings field. - http://bit.ly/24dEQj1
+
+/* Change Password */         
+Current Password: -------- /* Reads data (current password of user's account) from user database */ /* if incorrect, display "Password does not match" */
+New Password: ------ /* Writes data (new password of the user's account) to the user database */ /* Must be at least 10 characters and no more than 16 */
+Confirm Password: ------ /* Must match new password */
+
+
+
+/* Change Email */
+Current Email: ------ /* Reads data (current email of user's account) from user database */
+New Email: ------ /* Writes data (new email) to user database */ 
+
+
+
+/* Publish Content */ /* Writes data */
+Category: ----- /* Selects a category from a list in which to publish to. News -- Viral Videos -- Short Stories, ect. */
+Title: ----- /* Writes title of user's content to publish database */
+Body: ----- /* Write content/body to publish database */
+
+Here is an example of a publish content field but with out the category selector. - http://bit.ly/1SDz862  
