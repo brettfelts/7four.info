@@ -35,5 +35,8 @@ gulp // Runs default task which starts server and watches for changes using node
 gulp compile-css // this compiles all the sass into a css file.
 ```
 
+## Contributions
+In order to contribute, please follow [this guide](.github/CONTRIBUTING.md)
+
 ## HELP
 If you need help with anything please contact me on gitter @ Munsterberg. 
