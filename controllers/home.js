@@ -22,7 +22,7 @@ module.exports = function(app) {
   });
   
   // POST register form
-  app.post('/register', csrfProtection, function(req, res) {
+  app.post('/register', csrfProtection, checkPassword, function(req, res) {
     const user = new User({
       username: req.body.username,
       email: req.body.email
@@ -31,7 +31,7 @@ module.exports = function(app) {
     User.register(user, req.body.password, function(err, user) {
       if(err) {
         console.log(err);
-        return res.render('register');
+        return res.redirect('back');
       }
       passport.authenticate('local')(req, res, function() {
         res.redirect('/');
@@ -59,5 +59,25 @@ module.exports = function(app) {
     req.logout();
     res.redirect('/');
   });
+
+  function checkPassword(req, res, next) {
+    var min = 10;
+    var max = 18;
+    var passLen = req.body.password.length;
+    console.log(passLen);
+//    if((passLen < min) || (passLen > max) && (req.body.password != req.body.confirmPassword)) {
+//      res.redirect('back');
+//    } else {
+//      next();
+//    }
+      
+      if(req.body.password != req.body.confirmPassword) {
+        res.redirect('back');
+      } else if(passLen < min || passLen > max) {
+        res.redirect('back');
+      } else {
+        next();
+      }
+  }
   
  };

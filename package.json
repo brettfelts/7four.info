@@ -1,5 +1,5 @@
 {
-  "name": "lolextreme",
+  "name": "sevenfour",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -21,7 +21,7 @@
     "express-session": "^1.13.0",
     "express-validator": "^2.19.0",
     "method-override": "^2.3.5",
-    "mongoose": "^4.3.7",
+    "mongoose": "^4.4.4",
     "morgan": "^1.6.1",
     "node-sass-middleware": "^0.9.7",
     "passport": "^0.3.2",

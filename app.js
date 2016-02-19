@@ -21,7 +21,6 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const csrf = require('csurf');
 
-
 // Controllers
 // ===========================
 const homeController = require('./controllers/home');
@@ -34,7 +33,7 @@ const User = require('./models/User');
 const app = express();
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/database');
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/sevenfour');
 mongoose.connection.on('error', function() {
   console.error('MongoDB connection error. Please make sure MongoDB is running.');
 });
