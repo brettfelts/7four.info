@@ -227,6 +227,10 @@ ul {
 .input-group {
   margin-bottom: 5%;
 }
+
+.login-error {
+  display: none;
+}
   
 @media screen and (min-width: 768px) {
   .navlinks_bottom_container {
